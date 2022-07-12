@@ -1,3 +1,4 @@
+import { CadastroComponent } from './demos/reactive-forms/cadastro/cadastro.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './navegacao/home/home.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
@@ -10,6 +11,7 @@ export const rootRouterConfig: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'contato', component: ContatoComponent },
     { path: 'sobre', component: SobreComponent },
+    { path: 'cadastro', component: CadastroComponent },
     { path: 'feature-data-binding', component: DataBindingComponent },
     { path: 'produtos', component: ListaProdutoComponent },
     { path: 'produto-detalhe/:id', component: ListaProdutoComponent }
