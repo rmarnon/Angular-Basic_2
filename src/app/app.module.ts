@@ -20,6 +20,7 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 import { CadastroComponent } from './demos/reactive-forms/cadastro/cadastro.component';
+import { ObservablesComponent } from './demos/observables/observables.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CadastroComponent } from './demos/reactive-forms/cadastro/cadastro.comp
     ContatoComponent,
     DataBindingComponent,
     ListaProdutoComponent,
-    CadastroComponent
+    CadastroComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
