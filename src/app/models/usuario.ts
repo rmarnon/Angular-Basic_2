@@ -5,4 +5,4 @@ export interface Usuario {
     cpf: string;
     password: string;
     confirmPassword: string;
-}
+} 
