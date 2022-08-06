@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Produto } from '../produto';
+import { Produto } from '../../models/produtos/produto';
 import { ProdutoService } from '../produtos.service';
 
 @Component({
