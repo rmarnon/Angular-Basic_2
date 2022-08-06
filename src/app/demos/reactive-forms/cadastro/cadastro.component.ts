@@ -1,27 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Usuario } from "./../../../usuarios/usuario";
+import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html'
+  selector: "app-cadastro",
+  templateUrl: "./cadastro.component.html",
 })
 export class CadastroComponent implements OnInit {
-
+  usuario: Usuario;
   cadastroForm: FormGroup;
-  constructor() { }
+
+  constructor(private readonly fb: FormBuilder) {}
 
   ngOnInit() {
-    this.cadastroForm = new FormGroup({
-      name: new FormControl(''),
-      email: new FormControl(''),
-      cpf: new FormControl(''),
-      password: new FormControl(''),            
-      confirmPassword: new FormControl(''),            
+    this.cadastroForm = this.fb.group({
+      name: [''],
+      email: [''],
+      cpf: [''],
+      password: [''],
+      confirmPassword: [''],
     });
   }
 
   addUser() {
-    let form = this.cadastroForm.value;
+    this.usuario = Object.assign({}, this.usuario, this.cadastroForm.value);
   }
-
 }
