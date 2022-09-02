@@ -6,9 +6,9 @@
                 <label class="col-md-2 control-label" for="name">Nome Completo</label>
                 <div class="col-md-10">
                     <input class="form-control" type="text" id="name" placeholder="Nome" formControlName="name"
-                        [ngClass]="{'is-invalid': validateForm('name') }" />
-                    <span class="text-danger" *ngIf="validateForm('name')">
-                        <p>Campo obrigatório</p>
+                        [ngClass]="{'is-invalid': displayMessage.name }" />
+                    <span class="text-danger" *ngIf="displayMessage.name">
+                        <p [innerHTML]="displayMessage.name"></p>
                     </span>
                 </div>
             </div>
@@ -17,9 +17,9 @@
                 <label class="col-md-2 control-label" for="cpf">Número do Documento</label>
                 <div class="col-md-10">
                     <input class="form-control" type="text" id="cpf" placeholder="CPF" formControlName="cpf"
-                        [ngClass]="{'is-invalid': validateForm('cpf') }" />
-                    <span class="text-danger" *ngIf="validateForm('cpf')">
-                        <p>Campo obrigatório</p>
+                        [ngClass]="{'is-invalid': displayMessage.cpf }" />
+                    <span class="text-danger" *ngIf="displayMessage.cpf">
+                        <p [innerHTML]="displayMessage.cpf"></p>
                     </span>
                 </div>
             </div>
@@ -28,12 +28,9 @@
                 <label class="col-md-2 control-label" for="email">Email</label>
                 <div class="col-md-10">
                     <input class="form-control" type="text" id="email" placeholder="Email" formControlName="email"
-                        [ngClass]="{'is-invalid': validateForm('email') }" />
-                    <span class="text-danger" *ngIf="this.validateForm('email') && this.cadastroForm.get('email')?.errors?.required">
-                        <p>Campo obrigatório</p>
-                    </span>
-                    <span class="text-danger" *ngIf="this.validateForm('email') && this.cadastroForm.get('email')?.errors?.email">
-                        <p>Email em formato inválido</p>
+                        [ngClass]="{'is-invalid': displayMessage.email }" />
+                    <span class="text-danger" *ngIf="displayMessage.email">
+                        <p [innerHTML]="displayMessage.email"></p>
                     </span>
                 </div>
             </div>
@@ -42,9 +39,9 @@
                 <label class="col-md-2 control-label" for="password">Senha</label>
                 <div class="col-md-10">
                     <input class="form-control" type="password" id="password" placeholder="Senha"
-                        formControlName="password" [ngClass]="{'is-invalid': validateForm('password') }" />
-                    <span class="text-danger" *ngIf="validateForm('password')">
-                        <p>Campo obrigatório</p>
+                        formControlName="password" [ngClass]="{'is-invalid': displayMessage.password}" />
+                    <span class="text-danger" *ngIf="displayMessage.password">
+                        <p [innerHTML]="displayMessage.password"></p>
                     </span>
                 </div>
             </div>
@@ -53,10 +50,9 @@
                 <label class="col-md-2 control-label" for="confirmPassword">Confirmar Senha</label>
                 <div class="col-md-10">
                     <input class="form-control" type="password" id="confirmPassword" placeholder="Confirmar Senha"
-                        formControlName="confirmPassword"
-                        [ngClass]="{'is-invalid': validateForm('confirmPassword') }" />
-                    <span class="text-danger" *ngIf="validateForm('confirmPassword')">
-                        <p>Campo obrigatório</p>
+                        formControlName="confirmPassword" [ngClass]="{'is-invalid': displayMessage.confirmPassword}" />
+                    <span class="text-danger" *ngIf="displayMessage.confirmPassword">
+                        <p [innerHTML]="displayMessage.confirmPassword"></p>
                     </span>
                 </div>
             </div>
