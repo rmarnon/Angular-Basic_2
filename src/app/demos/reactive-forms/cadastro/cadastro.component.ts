@@ -62,10 +62,10 @@ export class CadastroComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.cadastroForm = this.fb.group({
       name: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(100)])],
-      email: ["", Validators.compose([Validators.required, Validators.email])],
-      cpf: ["", Validators.required],
-      password: ["", Validators.required],
-      confirmPassword: ["", Validators.required],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      cpf: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required],
     });
   }
 
