@@ -15,7 +15,7 @@ const rootRouterConfig: Routes = [
     { path: 'sobre', component: SobreComponent },
     { path: 'cadastro', component: CadastroComponent },
     { path: 'feature-data-binding', component: DataBindingComponent },
-    { path: 'produtos', component: ListaProdutoComponent },
+    { path: 'produtos', loadChildren: () => import('../app/produtos/produto.module').then(x => x.ProdutoModeule) },
     { path: 'produto-detalhe/:id', component: ListaProdutoComponent },
     { path: 'observables', component: ObservablesComponent }
 ];

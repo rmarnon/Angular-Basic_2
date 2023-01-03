@@ -14,7 +14,6 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ProdutoService } from './produtos/produtos.service';
-import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 import { CadastroComponent } from './demos/reactive-forms/cadastro/cadastro.component';
 import { ObservablesComponent } from './demos/observables/observables.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
@@ -26,7 +25,6 @@ import { AppRoutingModule } from './app.routes';
     SobreComponent,
     ContatoComponent,
     DataBindingComponent,
-    ListaProdutoComponent,
     CadastroComponent,
     ObservablesComponent
   ],
