@@ -8,9 +8,9 @@ import { Component, Input } from "@angular/core";
 export class ProcutoCountComponent {
     @Input() produtos: Produto[];
 
-    contadorAtivos(): number {
+    contadorPromocao(): number {
         if (!this.produtos) return;
 
-        return this.produtos.filter(x => x.ativo).length;
+        return this.produtos.filter(x => x.promocao).length;
     }
 }

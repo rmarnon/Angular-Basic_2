@@ -23,4 +23,11 @@ export class ListaProdutoComponent implements OnInit {
         error => console.log(error)
       );
   }
+
+  venderProduto(event: Produto): void {
+    if (!event.promocao) return;
+     event.promocao = false;
+
+     alert("Produto Vendido!");
+  }
 }

@@ -5,7 +5,12 @@
 
     <div class="row text-center">
 
-        <produto-card class="col-md-4" *ngFor="let produto of produtos" [produto]="produto"></produto-card>
+    <produto-card 
+        class="col-md-4" 
+        *ngFor="let produto of produtos" 
+        [produto]="produto"
+        (promocao)="venderProduto($event)">
+    </produto-card>
 
     </div>
 </div>
