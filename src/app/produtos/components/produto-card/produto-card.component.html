@@ -13,7 +13,7 @@
         </div>
 
         <div *ngIf="produto.promocao" class="card-body">
-            <ng-content></ng-content>
+            <ng-content select=".corre"></ng-content>
             <div><h4 class="card-text">De:
                 <small><del>{{ produto.valor | currency:'BRL':true:'1.2-2':'pt' }}</del></small>
                 Por: {{ produto.valorPromo | currency:'BRL':true:'1.2-2':'pt' }}
@@ -21,6 +21,7 @@
         </div>
 
         <div *ngIf="!produto.promocao" class="card-body">
+            <ng-content select=".loja"></ng-content>
             <div><h4>{{ produto.valor | currency:'BRL':true:'1.2-2':'pt' }}</h4></div>
         </div>
 
