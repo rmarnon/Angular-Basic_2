@@ -5,7 +5,7 @@ import { Component, Input } from "@angular/core";
     selector: 'produto-count',
     templateUrl: './produto-count.component.html'
 })
-export class ProcutoCountComponent {
+export class ProdutoCountComponent {
     @Input() produtos: Produto[];
 
     contadorPromocao(): number {

@@ -6,7 +6,7 @@ import { ListaProdutoComponent } from './pages/lista-produto/lista-produto.compo
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-import { ProcutoCountComponent } from './components/produto-count/produto-count.component';
+import { ProdutoCountComponent } from './components/produto-count/produto-count.component';
 registerLocaleData(localePt);
 
 
@@ -14,7 +14,7 @@ registerLocaleData(localePt);
     declarations: [
         ListaProdutoComponent,
         ProdutoCardComponent,
-        ProcutoCountComponent
+        ProdutoCountComponent
     ],
     imports: [
         CommonModule,
