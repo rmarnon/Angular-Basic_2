@@ -1,5 +1,6 @@
+import { ProdutoCardComponent } from './../../components/produto-card/produto-card.component';
 import { fromEvent, Observable } from 'rxjs';
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 
 import { Produto } from '../../../models/produto';
 import { ProdutoService } from '../../produtos.service';
@@ -12,6 +13,8 @@ import { ProdutoCountComponent } from '../../components/produto-count/produto-co
 export class ListaProdutoComponent implements OnInit, AfterViewInit {
   @ViewChild('lista', { static: false }) elemento: ElementRef;
   @ViewChild(ProdutoCountComponent, { static: false }) contador: ProdutoCountComponent;
+
+  @ViewChildren(ProdutoCardComponent) produtoQuery: QueryList<ProdutoCardComponent>;
 
   constructor(private produtoService: ProdutoService) { }
 
@@ -29,7 +32,11 @@ export class ListaProdutoComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    alert(this.contador.contadorPromocao());
+    alert('Produtos em promoção: ' + this.contador.contadorPromocao());
+
+    this.produtoQuery.forEach(p => {
+      alert(p.produto.nome);
+    });
 
     let clicou: Observable<any> = fromEvent(this.elemento.nativeElement, 'click');
     clicou.subscribe(() => {
